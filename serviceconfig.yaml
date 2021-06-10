@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: aibl-app-service
+spec:
+  type: NodePort
+  selector:
+    app: MyApp
+  ports:
+    - port: 9990
+      targetPort: 9990
+      name: one
+      nodePort: 30007
+    - port: 55463
+      name: two
+      targetPort: 55463
+      nodePort: 30008
+    - port: 9999
+      name: three
+      targetPort: 9999
+      nodePort: 30009
+    - port: 8080
+      name: four
+      targetPort: 8080
+      nodePort: 30010
+    - port: 4447
+      name: five
+      targetPort: 4447
+      nodePort: 30011
