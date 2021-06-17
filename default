@@ -2,19 +2,19 @@ server {
         server_name 172.17.12.27;
 
         location /app4 {
-proxy_pass http://minikube-er-ip:9990;
+proxy_pass http://192.168.99.101:9990;
 }
 location /app2 {
-proxy_pass http://minikube-er-ip:55463;
+proxy_pass http://192.168.99.101:55463;
 }
 location /app3 {
-proxy_pass http://minikube-er-ip:9999;
+proxy_pass http://192.168.99.101:9999;
 }
 location /app1 {
-proxy_pass http://minikube-er-ip:8080;
+proxy_pass http://192.168.99.101:8080;
 }
 location /app5 {
-proxy_pass http://minikube-er-ip:4447;
+proxy_pass http://192.168.99.101:4447;
 }
 }
 
