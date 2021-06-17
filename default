@@ -2,18 +2,18 @@ server {
         server_name 172.17.12.27;
 
         location /app4 {
-proxy_pass 192.168.99.101:9990;
+proxy_pass 192.168.99.101:30007;
 }
 location /app2 {
-proxy_pass 192.168.99.101:55463;
+proxy_pass 192.168.99.101:30008;
 }
 location /app3 {
-proxy_pass 192.168.99.101:9999;
+proxy_pass 192.168.99.101:30009;
 }
 location /app1 {
-proxy_pass 192.168.99.101:8080;
+proxy_pass 192.168.99.101:30010;
 }
 location /app5 {
-proxy_pass 192.168.99.101:4447;
+proxy_pass 192.168.99.101:30011;
 }
 }
