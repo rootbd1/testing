@@ -1,7 +1,19 @@
 server {
         server_name 192.168.1.104;
 
-        location / {
-                proxy_pass http://127.0.0.1:45677/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/;
+        location /app4 {
+proxy_pass http://192.168.99.101:9990;
+}
+location /app2 {
+proxy_pass http://192.168.99.101:55463;
+}
+location /app3 {
+proxy_pass http://192.168.99.101:9999;
+}
+location /app1 {
+proxy_pass http://192.168.99.101:8080;
+}
+location /app5 {
+proxy_pass http://192.168.99.101:4447;
 }
 }
