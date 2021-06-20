@@ -1,19 +1,9 @@
-server {
-        server_name 192.168.1.104;
-
-        location ~ ^/app4(/?)(.*) {
-proxy_pass http://192.168.49.2:30007/$2;
+location /app1 {
+proxy_pass http://minikube-er-ip:8000;
 }
-location ~ ^/app2(/?)(.*) {
-proxy_pass http://192.168.49.2:30007/$2;
+location /app2 {
+proxy_pass http://minikube-er-ip:8080;
 }
-location ~ ^/app3(/?)(.*) {
-proxy_pass http://192.168.49.2:30007/$2;
-}
-location ~ ^/app1(/?)(.*) {
-proxy_pass http://192.168.49.2:30007/$2;
-}
-location ~ ^/app5(/?)(.*) {
-proxy_pass http://192.168.49.2:30007/$2;
-}
+location /app3 {
+proxy_pass http://minikube-er-ip:9090;
 }
